@@ -1,6 +1,10 @@
+import { useState } from "react";
+import Search from "./Components/Search";
 import "./index.css";
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
+
   return (
     <main>
       <div className="wrapper">
@@ -11,6 +15,8 @@ function App() {
             without paying
           </h1>
         </header>
+
+        <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       </div>
     </main>
   );
